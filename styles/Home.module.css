@@ -15,8 +15,7 @@
 
 
 .area{
-    background: #393E46;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    background: #393E46;
     height: 95vh;
     width: 95vw;
     flex: 1;
@@ -137,7 +136,7 @@
 .avatar {
     height: 30vh;
     width: 20vw;
-    background-image: url("../assets/images/sofiane.png");
+    background-image: url("/images/sofiane.png");
     position: absolute;
     border-radius: 50px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
