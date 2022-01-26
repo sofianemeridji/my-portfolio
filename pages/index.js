@@ -19,11 +19,16 @@ export default function Home() {
           <li></li>
           <li></li>
           <li></li>
+          <div className={styles.avatar}/>
+          <p className={styles.fullname}>MERIDJI Sofiane</p>
+          <p className={styles.title}>Full-Stack Developer</p>
+          <p className={styles.description}>I am a full-stack developer passionate about the development world, I have experience on the WEB and Mobile, I work on the different sides (front / back)</p>
         </ul>
-        <div className={styles.avatar}>
+        
 
-      </div>
-      </div>
+
+  </div>
+
       
       
     </Page>

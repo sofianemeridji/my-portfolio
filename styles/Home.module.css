@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@font-face {
+    font-family: myFont;
+    src: url('/fonts/LeagueSpartan-Bold.otf');
+  }
 
 .context {
     width: 100%;
@@ -34,6 +38,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .circles li{
@@ -45,7 +54,6 @@
     background: #ffd26985;
     animation: animate 25s linear infinite;
     bottom: 0px;
-    
 }
 
 .circles li:nth-child(1){
@@ -58,8 +66,8 @@
 
 .circles li:nth-child(2){
     left: 10%;
-    width: 20px;
-    height: 20px;
+    width: 150px;
+    height: 150px;
     animation-delay: 0s;
     animation-duration: 12s;
 }
@@ -77,6 +85,9 @@
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s;
+    background-image: url("/images/sofiane.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .circles li:nth-child(5){
@@ -84,6 +95,9 @@
     width: 20px;
     height: 20px;
     animation-delay: 0s;
+    background-image: url("/images/sofiane.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .circles li:nth-child(6){
@@ -106,6 +120,9 @@
     height: 25px;
     animation-delay: 0s;
     animation-duration: 45s;
+    background-image: url("/images/sofiane.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .circles li:nth-child(9){
@@ -114,6 +131,9 @@
     height: 15px;
     animation-delay: 0s;
     animation-duration: 35s;
+    background-image: url("/images/sofiane.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .circles li:nth-child(10){
@@ -122,29 +142,48 @@
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
-}
-
-.circles li:nth-child(11){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
+    
 }
 
 .avatar {
-    height: 30vh;
-    width: 20vw;
+    height: 25vh;
+    width: 15vw;
     background-image: url("/images/sofiane.png");
-    position: absolute;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-size: cover;
     background-repeat: no-repeat;
     border: solid #ffd269;
+    animation-delay: 0s;
+    animation-duration: 11s;
+    animation: animateavatar 10s linear infinite;
 }
 
+.fullname {
+    font-size: 60px;
+    color: white;
+    font-family: myFont;
+    font-weight: bold;
+    margin: 10px;
+}
 
+.title {
+    font-size: 25px;
+    color: #ffd269;
+    font-family: myFont;
+    margin: -15px;
+}
+
+.description {
+    font-size: 20px;
+    color: white;
+    font-family: myFont;
+    margin: 65px;
+    text-align: center;
+    padding: 20px;
+    padding-left: 15vw;
+    padding-right: 14vw;
+}
 
 @keyframes animate {
 
@@ -160,6 +199,22 @@
         opacity: 1;
         border-radius: 50%;
         display: block;
+    }
+
+}
+
+@keyframes animateavatar {
+
+    0%{
+        border-radius: 20px;
+    }
+
+    50%{
+        border-radius: 50%;
+    }
+
+    100%{
+        border-radius:20px ;
     }
 
 }
