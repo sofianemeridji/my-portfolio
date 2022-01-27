@@ -27,15 +27,15 @@ export default function Home() {
           <div className={styles.avatar}/>
           <p className={styles.fullname}>MERIDJI Sofiane </p>
           <p className={styles.title}>Full-Stack Developer</p>
-          <p className={styles.description}>I am a full-stack developer passionate about the development world, I have experience on the WEB and Mobile, I work on the different sides (FRONTEND/BACKEND)</p>
+          <p className={styles.description}>I am a full-stack developer passionate about the development world, I have experience on the WEB and Mobile, I work on the different sides (FRONTEND/BAqCKEND)</p>
         </ul>   
         <div style={{width: '100%'}}>
           <ul className={styles.ul}>
             <li><a href="#"><span></span><span></span><span></span><span></span></a><FontAwesomeIcon style={{width:'20px'}} icon={faFacebookF} /> </li>
             <li><a href="#"><span></span><span></span><span></span><span></span><FontAwesomeIcon style={{width:'20px'}} icon={faTwitter} /></a></li>
             <li><a href="#"><span></span><span></span><span></span><span></span><FontAwesomeIcon style={{width:'20px'}} icon={faGithub} /></a></li>
-            <li><a href="#"><span></span><span></span><span></span><span></span><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><span></span><span></span><span></span><span></span><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><span></span><span></span><span></span><span></span></a></li>
+            <li><a href="#"><span></span><span></span><span></span><span></span></a></li>
           </ul>
         </div>
       </div>
