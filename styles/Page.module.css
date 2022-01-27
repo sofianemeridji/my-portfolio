@@ -3,6 +3,15 @@
   width: 100vw;
   padding-top: 2.5vh;
   background-color: #222831;
+  cursor: none;
+}
+
+.customCursor {
+  position: absolute;
+  background-color: #ffd269;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 .main {
