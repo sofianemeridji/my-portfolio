@@ -147,8 +147,8 @@
 }
 
 .avatar {
-    height: 25vh;
-    width: 15vw;
+    height: 300px;
+    width: 300px;
     background-image: url("/images/sofiane.png");
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -413,5 +413,23 @@
       animation-delay: 0s;
       animation-duration: 11s;
       
+  }
+}
+
+@media (max-width: 400px) {
+  .description {
+    font-size: 14px;
+    margin: 20px;
+    padding: 0px;
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+  .fullname {
+    font-size: 30px;
+    margin: 10px;
+  }
+  .title {
+    font-size: 18px;
+    margin: -5px;
   }
 }
