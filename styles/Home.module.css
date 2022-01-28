@@ -4,19 +4,12 @@
     src: url('/fonts/LeagueSpartan-Bold.otf');
   }
 
-.context {
-    width: 100%;
-    position: absolute;
-    top:50vh;
-    
+.buttons_containers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
-
 
 .area{
     background: #393E46;
@@ -30,6 +23,15 @@
     border-radius: 20px;
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+}
+
+.drawerIcon {
+  color: #ffd269;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  display: none;
 }
 
 .circles{
@@ -274,6 +276,54 @@
     transition: transform .5s;
   }
 
+  .buttons_container {
+    display: flex;
+  }
+  
+  .btn {
+    width: 210px;
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222831;
+    padding: 17px 60px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    border-radius: 10px;
+  }
+  
+  .btn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #ffd269;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
 @keyframes animate {
 
     0%{
@@ -308,7 +358,19 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1150px) {
+  .buttons_containers {
+    flex-direction: column;
+  }
+  .description {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 690px) {
+  .buttons_containers {
+    display: none;
+  }
   .description {
     font-size: 16px;
     margin: 20px;
@@ -414,6 +476,10 @@
       animation-duration: 11s;
       
   }
+
+  .drawerIcon {
+    display: inherit;
+  }
 }
 
 @media (max-width: 400px) {
@@ -432,4 +498,48 @@
     font-size: 18px;
     margin: -5px;
   }
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #222831;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffd269;
+  font-family: myFont;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

@@ -6,9 +6,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitterSquare, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
   return (
     <Page name={'GO!'}>
-      
+      <div id="mySidenav" className={styles.sidenav}>
+        <a href="javascript:void(0)" className={styles.closebtn} onClick={() => closeNav()} >&times;</a>
+        <a href="#">About me</a>
+        <a href="#">Experience</a>
+        <a href="#">Work</a>
+        <a href="#">Contact</a>
+        <a href="#">Resume</a>
+      </div>
+
+      <span onClick={() => openNav()} className={styles.drawerIcon}>&#9776;</span>
       <div className={styles.area}>
         <ul className={styles.circles}>
           <li></li>
@@ -26,8 +44,20 @@ export default function Home() {
           <p className={styles.fullname}>MERIDJI Sofiane </p>
           <p className={styles.title}>Full-Stack Developer</p>
           <p className={styles.description}>I am a full-stack developer passionate about the development world, I have experience on the WEB and Mobile, I work on the different sides (FRONTEND/BACKEND)</p>
-        </ul>   
-        <div style={{width: '100%'}}>
+        </ul>
+        <div className={styles.buttons_containers}>
+          <div className={styles.buttons_container}>
+            <button className={styles.btn}><span>About me</span></button>
+            <button className={styles.btn}><span>Experience</span></button>
+            <button className={styles.btn}><span>Work</span></button>
+          </div>
+          <div className={styles.buttons_container}>
+            <button className={styles.btn}><span>Contact</span></button>
+            <button className={styles.btn}><span>Resume</span></button>
+          </div>
+        </div>
+        
+        <div style={{width: '100%', marginTop: 20}}>
           <ul className={styles.ul}>
             <li>
               <a href="https://www.linkedin.com/in/sofiane-meridji/" target="_blank" rel="noreferrer">
