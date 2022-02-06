@@ -19,8 +19,10 @@ export default function Page(props) {
       </Head>
 
       <main>
+        <div className={styles.area}>
           <div style={{left:MousePosition.left , top: MousePosition.top}} className={styles.customCursor}/>
           {props.children}
+        </div>
       </main>
     </div>
   )

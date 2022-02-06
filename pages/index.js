@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Page from '../src/layouts/page'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitterSquare, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 export default function Home() {
 
@@ -27,7 +26,7 @@ export default function Home() {
       </div>
 
       <span onClick={() => openNav()} className={styles.drawerIcon}>&#9776;</span>
-      <div className={styles.area}>
+      
         <ul className={styles.circles}>
           <li></li>
           <li></li>
@@ -47,7 +46,9 @@ export default function Home() {
         </ul>
         <div className={styles.buttons_containers}>
           <div className={styles.buttons_container}>
-            <button className={styles.btn}><span>About me</span></button>
+            <Link href="/about" passHref>
+              <button className={styles.btn}><span>About me</span></button>
+            </Link>
             <button className={styles.btn}><span>Experience</span></button>
             <button className={styles.btn}><span>Work</span></button>
           </div>
@@ -84,7 +85,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
+
     </Page>
   )
 }

@@ -14,6 +14,20 @@
   border-radius: 50%;
 }
 
+.area{
+  background: #393E46;
+  height: 95vh;
+  width: 95vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
